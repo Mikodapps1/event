@@ -1,24 +1,5 @@
 <!DOCTYPE html>
-<!-- 照こくちーずプロ参 -->
 <html lang="ja">
-
-  <!-- SNS対策 先生に聞く-->
-  <!-- <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><script src="https://pagead2.googlesyndication.com/pagead/js/r20201201/r201100131/rum_fy2019.js"></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=www.kokuchpro.com&amp;callback=_gfp_s_&amp;client=ca-pub-5936792356450049&amp;cookie=ID%3D5ac6b1c9f6b566a9%3AT%3D1607006056%3AS%3DALNI_MbIIC-4b3eJULUE7LtkRzI5d_SKWQ"></script> -->
-
-  <!-- SNS情報 -->
-  <meta property="fb:app_id" content="あああああああ">
-  <meta property="og:type" content="あああああ">
-  <meta property="og:url" content="ああああああ">
-  <meta property="og:title" content="ああああああああ">
-  <meta property="og:image" content="あああああああああ">
-
-  <!-- 以下は必要？
-  <meta name="twitter:site" content="ああああああああ">
-  <meta name="twitter:card" content="ああああああああ"> -->
-
-  <!-- 新しいIEに変更してねって意味←不要かも！！-->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-  <meta charset="utf-8">
 
   <!-- レスポンス対応 -->
   <!-- <meta name="viewport" content="width=1030px,maximum-scale=2.0,user-scalable=yes"> -->
@@ -43,14 +24,6 @@
   <!-- --font-awsome-- -->
   <script src="https://kit.fontawesome.com/720c0d4f32.js" crossorigin="anonymous"></script>
 
-    <!-- Google Tag Manager -->
-
-    <!-- Minimize page flickering -->
-
-    <!-- Google Analytics Tracking code -->
-
-    <!-- DFP Tracking code -->
-
     <!-- Favicons -->
     <link rel=”icon” href=“/image/favicon/favicon.ico”>
     <title>Mikodapps_飲み会イベント</title>
@@ -60,19 +33,25 @@
   <header>
     <div class="top_category">
       <div class="left">
-        <h1>Mikodapps <span style="font-size:10px">いつもここから</span></h1>
+        <h1>Mikodapps </h1>
       </div>
-      <div class="right">
-        <p>お気軽にお問い合わせください。</p>
-        <p>TEL:080-xxxx-xxxx</p>
+      <div class="hamburger">
+        <div class="right">
+          <p>お気軽にお問い合わせください。</p>
+          <p>TEL:080-xxxx-xxxx</p>
+        </div>
+        <div class="sp_menu">
+          <span class="open"><i class="fas fa-bars"></i></span>
+          <span class="close"><i class="fas fa-times"></i></span>
+        </div>
       </div>
     </div>
     <div class="header_image">
       <div class="slider">
-        <img src="image/image1.png" height="400" alt="">
-        <img src="image/image2.png" height="400" alt="">
-        <img src="image/image3.png" height="400" alt="">
-        <img src="image/image4.png" height="400" alt="">
+        <img src="image/image1.png" alt="">
+        <img src="image/image2.png" alt="">
+        <img src="image/image3.png" alt="">
+        <img src="image/image4.png" alt="">
         </div>
       <ul class="content" >
         <li class="menu1"><a href="#">Home</a></li>
@@ -82,6 +61,17 @@
         <li class="menu5"><a href="#">Question</a></li>
         <li class="menu6"><a href="#">Contact</a></li>
       </ul>
+      <!-- ハンバーガーメニュー -->
+      <div class="content_overlay">
+        <ul>
+          <li class="menu1"><a href="#">Home</a></li>
+          <li class="menu2"><a href="#">Schedule</a></li>
+          <li class="menu3"><a href="#">Info</a></li>
+          <li class="menu4"><a href="#">First time</a></li>
+          <li class="menu5"><a href="#">Question</a></li>
+          <li class="menu6"><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -397,6 +387,22 @@
 <!-- カレンダー -->
 <script src="fullcalendar/main.js"></script>
 
+<!-- ハンバーガーアクション -->
+<script>
+$('.sp_menu').on('click', ()=> {
+ $('.content_overlay').fadeIn(700),
+ $('.open').fadeOut(700),
+ $('.close').fadeIn(700)
+})
+</script>
+<!-- <script>
+  $('.close').on('click', ()=> {
+  $('.content_overlay').hide(700),
+  $('.open').fadeIn(700),
+  $('close').fadeOut()
+  }) -->
+</script>
+<!-- スライダーアクション -->
 <script>
   $(document).ready(function(){
     $('.slider').bxSlider({
@@ -407,6 +413,7 @@
     });
   });
 </script>
+<!-- カレンダーアクション -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');

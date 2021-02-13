@@ -15,7 +15,7 @@ div[class ^="event"] {
 .event_info p {
   margin: 0 auto;
   padding-bottom: 30px;
-  width: 800px;
+  max-width: 800px;
   line-height: normal;
   letter-spacing: 2px;
 
@@ -78,7 +78,7 @@ div[class ^="event"] {
     margin: 40px auto;
   }
   .event_contents a > .contents {
-    width: 600px;
+    width: 80%;
   }
 }
 /* -----ここからイベント開催予定日----- */
@@ -92,10 +92,16 @@ div[class ^="event"] {
 
 .list {
   border: 1px solid gray ;
-  margin: 0  50px 30px 50px;
+  margin: 0  50px 30px;
   opacity: 0;
   transform: translateY(30px);
   transition: 1s;
+}
+
+@media screen and (max-width:375px){
+  .list {
+    margin: 0 20px 30px;
+  }
 }
 
 /* addでshowクラス追加 */
@@ -195,7 +201,7 @@ transform: translate(0, -5px);
     display: block;
   }
   .photo .event_picture {
-    width: 600px;
+    width: 90%;
     margin: 0 auto;
   }
 }
